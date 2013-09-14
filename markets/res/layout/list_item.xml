@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="horizontal" >
+    
+	<TextView
+		android:layout_height="wrap_content"
+    	android:layout_width="20sp"
+		android:textSize="15sp" 
+		android:gravity="right"
+		android:background="#00000000"
+		android:textColor="#ffaaaaaa"
+    	android:id="@+id/item_id" />  
+
+	<TextView
+		android:layout_height="wrap_content"
+    	android:layout_width="80sp" 
+		android:textSize="15sp" 
+		android:gravity="right"
+		android:background="#00000000"
+		android:textColor="#ff8f7a10"
+    	android:id="@+id/item_name" />  
+    	
+	<TextView
+		android:layout_height="wrap_content"
+    	android:layout_width="75sp"   
+		android:textSize="15sp" 
+		android:gravity="right"
+		android:background="#00000000"
+		android:textColor="#ffffffff"
+    	android:id="@+id/item_price" />     
+    	
+	<TextView
+		android:layout_height="wrap_content"
+    	android:layout_width="70sp"   
+		android:textSize="15sp" 
+		android:gravity="right"
+		android:background="#00000000"
+		android:textColor="#ffffffff"
+    	android:id="@+id/item_change" /> 
+    	
+	<TextView
+		android:layout_height="wrap_content"
+    	android:layout_width="fill_parent"   
+		android:textSize="15sp" 
+		android:gravity="right"
+		android:paddingRight="20sp"
+		android:background="#00000000"
+		android:textColor="#ffffffff"
+    	android:id="@+id/item_rate" />   
+
+</LinearLayout>

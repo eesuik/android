@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Markets</string>
+    <string name="action_settings">Settings</string>
+    <string name="stock_name">股票名称</string>
+    <string name="stock_price">最新价</string>
+    <string name="stock_change">涨跌额</string>
+    <string name="stock_rate">涨跌幅</string>
+
+    <string name="btn_update">刷新</string>
+    <string name="btn_add">添加</string>
+    <string name="btn_delete">删除</string>
+</resources>
