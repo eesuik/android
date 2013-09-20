@@ -23,7 +23,6 @@ public class ShiborHttpClient {
 		httpPost = new HttpPost(SHIBOR_URL);
 	}
 	
-	@SuppressWarnings("deprecation")
 	public List<ShiborOvernight> getShiborOvernight(String month) {
 		ArrayList<ShiborOvernight> list = new ArrayList<ShiborOvernight>();
 

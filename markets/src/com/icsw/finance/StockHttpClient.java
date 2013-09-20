@@ -9,8 +9,6 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
-import android.util.Log;
-
 import com.icsw.finance.Stock.ParseSinaStockException;
 
 public class StockHttpClient {
@@ -19,9 +17,9 @@ public class StockHttpClient {
 	
 	//public StockHttpClient() {
 	//}
-	public List<Stock> getStock(long[] stockCodes) {
+	public List<Stock> getStock(int[] stockCode) {
 		ArrayList<Stock> list = new ArrayList<Stock>();
-		String url = SINAJS_URL + generateStockCodeRequest(stockCodes);
+		String url = SINAJS_URL + generateStockCodeRequest(stockCode);
 
     	try {
     		HttpPost httpPost = new HttpPost(url);
@@ -51,20 +49,20 @@ public class StockHttpClient {
     	return list;
 	}
 	
-	private String generateStockCodeRequest(long[] stockCodes){
+	private String generateStockCodeRequest(int[] stockCode){
 		
-		if(stockCodes == null || stockCodes.length == 0) {
+		if(stockCode == null || stockCode.length == 0) {
 			return "";
 		}
 		
 		StringBuilder sb = new StringBuilder();
 	
-		final int length = stockCodes.length;
+		final int length = stockCode.length;
 		for(int i = 0; i < length; ++i) {
-			if(stockCodes[i] >= 600000 || stockCodes[i] < 301)
-				sb.append(String.format("sh%06d", stockCodes[i]));
+			if(stockCode[i] >= 600000 || stockCode[i] < 301)
+				sb.append(String.format("sh%06d", stockCode[i]));
 			else
-				sb.append(String.format("sz%06d", stockCodes[i]));
+				sb.append(String.format("sz%06d", stockCode[i]));
 			if(i != length - 1)
 				sb.append(',');
 		}
